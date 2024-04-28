@@ -37,7 +37,7 @@ torchvision 0.11.1
 ```
 
 ## Data preparation
-Multi-Modal-CelebA-HQ Dataset [Link](https://github.com/IIGROUP/MM-CelebA-HQ-Dataset)
+Multi-Modal-CelebA-HQ Dataset [[Link](https://github.com/IIGROUP/MM-CelebA-HQ-Dataset)]
 
 ## Training
 The paper link：https://dl.acm.org/doi/10.1145/3581783.3612067
