@@ -1,7 +1,7 @@
 # PixelFace+: Towards Controllable Face Generation and Manipulation with Text Descriptions and Segmentation Masks
 [![Python 3.6](https://img.shields.io/badge/Python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
 
-[PixelFace+: Towards Controllable Face Generation and Manipulation with Text Descriptions and Segmentation Masks]([https://github.com/](https://dl.acm.org/doi/10.1145/3581783.3612067))
+[PixelFace+: Towards Controllable Face Generation and Manipulation with Text Descriptions and Segmentation Masks](https://dl.acm.org/doi/10.1145/3581783.3612067)
 
 The official implementation version of PixelFace+ in ACM MultiMedia 2023.
 
