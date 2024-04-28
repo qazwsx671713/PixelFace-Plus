@@ -39,12 +39,35 @@ torchvision 0.11.1
 ## Data preparation
 Multi-Modal-CelebA-HQ Dataset [[Link](https://github.com/IIGROUP/MM-CelebA-HQ-Dataset)]
 
+Before training, please dowload the dataset2.json (which has been compressed as a zip file), and place the file in the MMceleba dataset directory.
 ## Training
-The paper link：https://dl.acm.org/doi/10.1145/3581783.3612067
+1. Preparing your settings. To train a model, you should modify code/cfg/mmceleba.yml to adjust the settings you want. The default configuration is to train on MMceleba with input and output image resolution set to 256*256, and BatchSize set to 4. **Increasing the BatchSize may result in a decrease in semantic alignment after training, as a larger BatchSize reduces the constraint of the CLIP regularization loss.**
 
+2. Training the model. run  train.py under the main folder to start training:
+```
+cd /PixelFace+/code
+CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node  2 --master_port 10011  main.py --cfg cfg/mmceleba.yml
+```
+4. Testing the model. After training for more than 70 epochs, the model automatically evaluates its performance every ten epochs. If you need to modify the evaluation frequency, you can do so at line 675 in `\code\trainer.py`.
+
+## Pretrain Model
+1. Dowload the pretrain model.
 The Model link: https://pan.baidu.com/s/1ARSjz6IXCO2-8qf1Tf9p-A?pwd=qwer, the file extraction code:qwer.
 
-Train:
-Before training, please dowload the dataset2.json (which has been compressed as a zip file), and place the file in the MMceleba dataset directory.
-1. cd /PixelFace+/code
-2. CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node  2 --master_port 10011  main.py --cfg cfg/mmceleba.yml
+2. Modify the cfg file`\code\cfg\mmceleba.yml` to use the pretrain model:
+```
+TRAIN:
+  FLAG: True
+
+  ##### Modify This Line #####
+  NET_G: '/PATH/TO/PRETRAIN/MODEL'
+
+  B_NET_D: True
+  BATCH_SIZE: 4  
+  MAX_EPOCH: 100
+  SNAPSHOT_INTERVAL: 1  
+  DISCRIMINATOR_LR: 0.004
+  GENERATOR_LR: 0.002
+```
+## Acknowledgement
+Thanks for a lot of codes from [PixelFolder](https://github.com/BlingHe/PixelFolder) and [PixelFace](https://github.com/pengjunn/PixelFace).
