@@ -8,7 +8,7 @@ By Xiaoxiong Du, Jun Peng, Yiyi Zhou, Jinlu Zhang, Siting Chen, Guannan Jiang, X
 MM '23: Proceedings of the 31st ACM International Conference on Multimedia
 
 ## DEMO VIDEO
-[![Demo Video](https://youtu.be/tIKXBXaBbTo)
+[![Demo Video](https://www.youtube.com/watch?v=tIKXBXaBbTo)
 ## Introduction
 This repository is pytorch implementation of PixelFace+. PixelFace+ utilizes both mask and text features for highly controllable face generation and manipulation. We propose the GCMF module to achieve better decoupling. Additionally, to enhance the alignment between generated images and text, we introduce a regularization loss function based on CLIP. The framework diagram of PixelFace+ is shown below:![The Framework of PixelFace+](https://github.com/qazwsx671713/PixelFace-Plus/blob/main/framwork.png)
 
