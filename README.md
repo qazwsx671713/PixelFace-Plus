@@ -48,7 +48,7 @@ Before training, please dowload the dataset2.json (which has been compressed as 
 cd /PixelFace+/code
 CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node  2 --master_port 10011  main.py --cfg cfg/mmceleba.yml
 ```
-4. Testing the model. After training for more than 70 epochs, the model automatically evaluates its performance every ten epochs. If you need to modify the evaluation frequency, you can do so at line 675 in `\code\trainer.py`.
+3. Testing the model. After training for more than 70 epochs, the model automatically evaluates its performance every ten epochs. If you need to modify the evaluation frequency, you can do so at line 675 in `\code\trainer.py`.
 
 ## Pretrain Model
 1. Dowload the pretrain model.
