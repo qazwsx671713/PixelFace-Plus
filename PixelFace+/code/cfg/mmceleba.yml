@@ -1,0 +1,45 @@
+CONFIG_NAME: 'cond_26'
+
+DATASET_NAME: 'mmceleba3w'
+DATA_DIR: '/home/pengjun/data/face/multi_model_celeba'
+IMG_DIR: 'images_512'
+MU_SIG: '/home/pengjun/code/text2face/pytorch/eval/FID/mmceleba_train.npz'
+WORKERS: 4
+
+TREE:
+  BASE_SIZE: 256
+
+TRAIN:
+  FLAG: True
+  NET_G: '/home/pengjun/dxx/PixelFace+/output/ckpt_01502.pth' 
+  B_NET_D: True
+  BATCH_SIZE: 4  
+  MAX_EPOCH: 100
+  SNAPSHOT_INTERVAL: 1  
+  DISCRIMINATOR_LR: 0.004
+  GENERATOR_LR: 0.002
+  
+  NET_E: ''
+  SMOOTH:
+    GAMMA1: 4.0  
+    GAMMA2: 5.0
+    GAMMA3: 10.0  
+    LAMBDA: 5.0
+
+  D_REG_EVERY: 16
+  G_REG_EVERY: 4
+  R1: 10
+  PATH_BATCH_SHRINK: 2
+  PATH_REGULARIZE: 2
+
+GAN:
+  Z_DIM: 100
+  C_DIM: 100
+  W_DIM: 256
+  N_MLP: 8
+  
+TEXT:
+  CAPTIONS_PKL: 'captions_BERT_mmceleba.pickle'
+  EMBEDDING_DIM: 512
+  WORDS_NUM: 30
+  USE_PRE_EMB: True
