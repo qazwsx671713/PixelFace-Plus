@@ -29,6 +29,17 @@ series = {MM '23}
 ```
 
 ## Prerequisites
+```
+python 3.6
+pytorch 1.10.0
+pytorch-fid 0.2.1
+torchvision 0.11.1
+```
+
+## Data preparation
+Multi-Modal-CelebA-HQ Dataset [Link](https://github.com/IIGROUP/MM-CelebA-HQ-Dataset)
+
+## Training
 The paper link：https://dl.acm.org/doi/10.1145/3581783.3612067
 
 The Model link: https://pan.baidu.com/s/1ARSjz6IXCO2-8qf1Tf9p-A?pwd=qwer, the file extraction code:qwer.
