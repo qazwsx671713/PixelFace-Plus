@@ -1,4 +1,4 @@
-# PixelFace+
+# PixelFace+: Towards Controllable Face Generation and Manipulation with Text Descriptions and Segmentation Masks
 The official implementation version of PixelFace+ in ACM MultiMedia 2023.
 
 The paper link：https://dl.acm.org/doi/10.1145/3581783.3612067
