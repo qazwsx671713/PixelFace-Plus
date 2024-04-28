@@ -10,7 +10,24 @@ MM '23: Proceedings of the 31st ACM International Conference on Multimedia
 ## Introduction
 This repository is pytorch implementation of PixelFace+. PixelFace+ utilizes both mask and text features for highly controllable face generation and manipulation. We propose the GCMF module to achieve better decoupling. Additionally, to enhance the alignment between generated images and text, we introduce a regularization loss function based on CLIP. The framework diagram of PixelFace+ is shown below:![The Framework of PixelFace+](https://github.com/qazwsx671713/PixelFace-Plus/blob/main/framwork.png)
 
+## Citation
+@inproceedings{10.1145/3581783.3612067,
+author = {Du, Xiaoxiong and Peng, Jun and Zhou, Yiyi and Zhang, Jinlu and Chen, Siting and Jiang, Guannan and Sun, Xiaoshuai and Ji, Rongrong},
+title = {PixelFace+: Towards Controllable Face Generation and Manipulation with Text Descriptions and Segmentation Masks},
+year = {2023},
+isbn = {9798400701085},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3581783.3612067},
+doi = {10.1145/3581783.3612067},
+pages = {4666–4677},
+numpages = {12},
+keywords = {controllable face generation, face editing},
+location = {<conf-loc>, <city>Ottawa ON</city>, <country>Canada</country>, </conf-loc>},
+series = {MM '23}
+}
 
+## Prerequisites
 The paper link：https://dl.acm.org/doi/10.1145/3581783.3612067
 
 The Model link: https://pan.baidu.com/s/1ARSjz6IXCO2-8qf1Tf9p-A?pwd=qwer, the file extraction code:qwer.
